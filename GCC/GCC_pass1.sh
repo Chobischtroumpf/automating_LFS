@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $LFS/sources/
 tar -xf $LFS/sources/gcc-9.2.0.tar.xz || exit
 cd $LFS/sources/gcc-9.2.0/ || exit
 
@@ -30,8 +31,8 @@ case $(uname -m) in
  ;;
 esac
 
-mkdir -v build
-cd       build
+mkdir -v $LFS/sources/gcc-9.2.0/build || exit
+cd       $LFS/sources/gcc-9.2.0/build || exit
 
 ../configure                                       \
     --target=$LFS_TGT                              \
@@ -58,5 +59,4 @@ cd       build
 make || exit
 
 make install || exit
-cd ..
 
