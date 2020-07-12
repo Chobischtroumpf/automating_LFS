@@ -7,3 +7,8 @@ these scripts will only work if you execute them after section II, chapter 5.3, 
 
 the script works in a fairly simple way : you run the "automating.sh" file, from the lfs user, and it wil in turn call every script to install and compile every package, from its sources.
 if for some reason one of the scripts were to have an error, it will stop, and in turn the main script will stop as well.
+
+## in order for the script to work, the $LFS variable needs to be set, and you will need to define the $LFS_SCRIPT variable as the absolute path to this repository.
+
+### example : LFS_SCRIPT = /home/chobischtroumpf/automating_LFS/
+### and LFS = /mnt/lfs
